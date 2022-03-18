@@ -32,6 +32,8 @@ endif()
 # === Subdirectories ===
 add_subdirectory(ouster_client)
 
+add_subdirectory(ouster_gazebo_plugins)
+
 if(BUILD_PCAP)
   add_subdirectory(ouster_pcap)
 endif()
