@@ -30,6 +30,9 @@
     <remap from="~/lidar_packets" to="/os_node/lidar_packets"/>
     <remap from="~/imu_packets" to="/os_node/imu_packets"/>
     <param name="~/tf_prefix" value="$(arg tf_prefix)"/>
+  </node>mg
+
+  <node pkg="ouster_ros" name="img_node" type="img_node" output="screen" required="true">
   </node>
 
   <node if="$(arg viz)" pkg="rviz" name="rviz" type="rviz" args="$(arg rviz_config)" output="screen" required="true" />

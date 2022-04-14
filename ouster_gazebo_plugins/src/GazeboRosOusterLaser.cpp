@@ -117,8 +117,8 @@ void GazeboRosOusterLaser::Load(sensors::SensorPtr _parent, sdf::ElementPtr _sdf
   }
 
   if (!_sdf->HasElement("frameName")) {
-    ROS_INFO("Ouster laser plugin missing <frameName>, defaults to /world");
-    frame_name_ = "/world";
+    ROS_INFO("Ouster laser plugin missing <frameName>, defaults to os_sensor");
+    frame_name_ = "os_sensor";
   } else {
     frame_name_ = _sdf->GetElement("frameName")->Get<std::string>();
   }
