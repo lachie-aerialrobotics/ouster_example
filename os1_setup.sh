@@ -2,7 +2,9 @@
 
 ETH_NAME="eth0"
 
-ip addr flush dev $ETH_NAME
+# ETH_NAME="enx8c04ba8aa209"
+
+sudo ip addr flush dev $ETH_NAME
 sudo ip addr add 10.5.5.1/24 dev $ETH_NAME
 
 read -n 1 -s -r -p "Please power on the lidar and press any key to continue..."
