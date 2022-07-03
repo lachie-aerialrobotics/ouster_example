@@ -11,4 +11,8 @@ read -n 1 -s -r -p "Please power on the lidar and press any key to continue..."
 
 sudo ip link set $ETH_NAME up
 
-sudo dnsmasq -C /dev/null -kd -F 10.5.5.50,10.5.5.100 -i $ETH_NAME --bind-dynamic
+sudo ptpd -i $ETH_NAME -M -V &
+
+sudo dnsmasq -C /dev/null -kd -F 10.5.5.50,10.5.5.100 -i $ETH_NAME --bind-dynamic &
+
+
